@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+
+{% block body %}
+<div>
+      <div class="bg-body-tertiaryp-5 rounded">
+        <div class="col-sm-8 mx-auto">
+          <h1>Welcome to CookBook Craze</h1>
+          <p>Where Every Dish Tells a Story!</p>
+          <p bold>In the bustling realm of culinary delights, where flavors dance and aromas tantalize, CookBook Craze stands as your gateway to a world of gastronomic adventure. Nestled within these pages, you'll discover more than just recipes – you'll uncover stories, traditions, and the heartfelt passion that fuels every culinary creation.</p>
+          <p>Dive into our carefully curated collection, where each recipe is a testament to the rich tapestry of global cuisine. From the sizzling streets of Bangkok to the quaint kitchens of Tuscany, embark on a journey that transcends borders and embraces diversity.</p>
+          <p>Whether you're a seasoned chef or a novice in the kitchen, CookBook Craze offers something for everyone. Delve into our step-by-step guides, designed to empower you with the skills and confidence to master any dish. From the art of sushi rolling to the secrets of perfecting a classic French soufflé, let your culinary prowess soar to new heights.</p>
+          <p>But CookBook Craze is more than just a compendium of recipes – it's a celebration of community. Join our vibrant community of food enthusiasts, where you can share your own culinary triumphs, swap kitchen tips, and forge lasting connections with fellow foodies from around the globe.</p>
+          <p>So, grab your apron, sharpen your knives, and prepare to embark on a gastronomic odyssey like no other. Welcome to CookBook Craze – where every dish tells a story, and every meal is an adventure waiting to be savored.</p>
+          <p>Bon appétit!</p>
+          <h3>We currently have {{ num_recipes }} recipes!</h3>
+            <a class="btn btn-primary" href="/recipes" role="button">All Recipes »</a>
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}

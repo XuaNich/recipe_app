@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Recipes</title>
+{% endblock %}
+
+
+{% block body %}
+  <h1>All Recipes</h1>
+<a href="/recipes/new/" class="btn btn-success float-right">New Recipe</a>
+<hr>
+  {% for recipe in recipes %}
+  {% if recipe.author %}
+  <br><small>Posted by Page Admin: {{ recipe.author }} on {{ recipe.date_posted }}</small>
+  {% else %}
+    <small>Posted by Unknown Contributor on {{ recipe.date_posted }}</small>
+  {% endif %}
+  <h3>{{ recipe.title }}</h3>
+  <p style="white-space: pre-wrap">{{ recipe.description }}</p>
+    <a href="/recipes/delete/{{ recipe.id }}" class="btn btn-danger">Delete</a>
+    <a href="/recipes/edit/{{ recipe.id }}" class="btn btn-primary">Edit</a><br><br>
+  {% endfor %}
+{% endblock %}
